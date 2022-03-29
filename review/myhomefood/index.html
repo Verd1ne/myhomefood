@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+</head>
+<body class="overflow-hidden">
+  <header>
+    <nav>
+      <h3 class="logo text-lg md:text-2xl xl:text-3xl font-semibold overflow-y-hidden">MyHomeFood</h3>
+        
+        <ul class="hamburger text-center text-xl flex flex-row overflow-hidden h-12">
+          <a class="!invisible lg:!visible mx-4" href="index.html"><li class="pt-2 pb-1 inline-block overflow-hidden">Home</li></a>
+          <a class="!invisible lg:!visible mx-4" href="recipes.html"><li class="pt-2 pb-1 inline-block overflow-hidden">Recipes</li></a>
+          <li class="login py-2 px-4 font-semibold rounded-lg overflow-hidden !invisible lg:!visible ml-3" onclick="document.getElementById('popup').style.visibility = 'visible', document.getElementById('popup').style.background = 'rgba(0, 0, 0, 0.5)', document.getElementById('filter').style.zIndex = '-10'">Sign Up</li>
+          <img class="w-12 lg:w-0 !visible lg:!invisible" src="images/Hamburger_icon.svg.png" alt="">
+        </ul>
+      
+    </nav>
+    <div id="popup" class="popup w-screen h-screen absolute -z-11 inset-0">
+      <div id="card" class="grid grid-rows-6 absolute bg-white rounded-xl p-6 sm:p-12 md:p-14 z-99 inset-y-1/4 inset-x-0 md:inset-x-1/4 lg:inset-x-1/4 xl:inset-x-1/3 h-2/3 w-screen md:w-1/2 lg:w-1/2 xl:w-1/3">
+        <div class="text-2xl px-2">LOGIN</div>
+        <div class="px-2 w-full overflow-hidden">
+          <h5 class=" overflow-hidden">Email</h5>
+          <input class="outline-none border-b-[2px] my-2 w-full" type="text">
+        </div>
+        <div class="px-2 w-full overflow-hidden">
+          <h5 class=" overflow-hidden">Password</h5>
+          <input class="outline-none border-b-[2px] my-2 w-full" type="password">
+        </div>
+        <div class="grid grid-cols-2 px-2">
+          <div class="flex flex-row">
+            <input class="mt-1 mr-1" type="checkbox">
+            <h4>Remember Me</h1>
+          </div>
+          <h4 class="text-right text-gray-500">Forgot Password?</h4>
+        </div>
+        <button class="buton px-2 text-white rounded-lg focus:outline-none text-2xl">
+          LOGIN
+        </button>
+        <button class="text-right px-2 underline focus:outline-none" onclick="document.getElementById('popup').style.visibility = 'hidden', document.getElementById('filter').style.zIndex = '100'">
+          Close
+        </button>
+      </div>
+    </div>
+    <section class="">
+      <div id="hero "class="hero relative -z-10">
+        <img class="" src="images/empty table.jpg" alt="">
+        <h1 class="headline text-lg sm:text-2xl lg:text-3xl xl:text-5xl overflow-y-hidden">MyHomeFood</h1>
+      </div>
+    </section>
+  </header>
+  
+  <div class="slider"></div>
+  <div class="sliderunder"></div>
+
+  <!-- <div class="filter width-100% mt-80 mx-auto">
+    <div class="card card-body">
+      <input id="search-input" class="form-control" type="text" placeholder="Search">
+    </div>
+    <table class="table table-striped">
+      <tr class="bg-info">
+          <th class="bg-info" data-colname="dish" data-order="desc">Dish &#9650</th>
+          <th data-colname="category" data-order="desc">Category &#9650</th>
+          <th data-colname="ingredients" data-order="desc">Ingredients &#9650</th>
+      </tr>
+      <tbody class="bg-white" id="myTable">
+          
+      </tbody>
+    </table>
+  </div> -->
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
